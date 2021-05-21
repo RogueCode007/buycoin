@@ -1,9 +1,10 @@
+//Grab the query string in the search bar and save in an empty object
 let queryDict = {}
 location.search.substr(1).split("&").forEach(function(item) {
     queryDict[item.split("=")[0]] = item.split("=")[1]
 })
 
-//GraphQl query
+// Build the GraphQL query and insert the entered username
 let query = `query{
   user(login: "${queryDict.username}") {
     name
@@ -30,9 +31,10 @@ let query = `query{
   }
 }`
 
+//Call this function 
 grabGitHubData(query)
 
-
+//Set loading state to be true
 let loading = true
 
 
@@ -47,11 +49,13 @@ async function grabGitHubData(query){
     })
     const body = await response.json()
     let data =   body.data;
-    console.log(data)
+    
+    //Handle error if user doesn't exist
     if (data.user.name == null){
       alert('User does not exist');
       location.href="index.html"
     }
+
     //Fill data in where necessary
     document.getElementsByClassName('owner')[0].innerText = data.user.name
     let username = document.getElementsByClassName('username')
@@ -165,7 +169,7 @@ async function grabGitHubData(query){
 
 
 
-//NavBar and Dropdown menus
+//NavBar and Dropdown menus toggle scripts
 let mobileNav = document.getElementById('mobile-nav')
 let bar = document.getElementById("bar");
 let icons1 = document.getElementById('icons1');
