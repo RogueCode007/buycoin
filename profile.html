@@ -1,0 +1,185 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Document</title>
+  <script src="https://use.fontawesome.com/6b69079b20.js"></script>
+  <script src="https://code.iconify.design/1/1.0.7/iconify.min.js"></script>
+  <link rel="stylesheet" href="app.css">
+  <link rel="preconnect" href="https://fonts.gstatic.com">
+<link href="https://fonts.googleapis.com/css2?family=Lato:wght@300;400;700;900&display=swap" rel="stylesheet">
+</head>
+<body>
+  <nav>
+    <div class="main-nav">
+      <div class="left-al">
+        <i class="fa fa-bars" id="bar" aria-hidden="true"></i>
+        <a href="index.html"><i class="fa fa-github" aria-hidden="true"></i></a>
+        <div class="menu">
+          <ul>
+            <li>
+              <div class="input">
+                <input type="text" placeholder="Search or jump to.." class='nav-input'>
+                <div>/</div>
+              </div>
+            </li>
+            <li>
+              <a href="#">Pulls</a>
+            </li>
+            <li>
+              <a href="#">Issues</a>
+            </li>
+            <li>
+              <a href="#">Marketplace</a>
+            </li>
+            <li>
+              <a href="#">Explore</a>
+            </li>
+          </ul>
+        </div>
+      </div>
+      <div class="right-al">
+        <i class="fa fa-bell-o" aria-hidden="true"></i>
+        <div class="dropdown">
+          <div id="icons1">
+            <span class="iconify" data-icon="octicon:plus-16" data-inline="false"></span>
+            <i class="fa fa-caret-down" aria-hidden="true"></i>
+          </div>
+          <div class="dropdown-content hide" id="content-1">
+            <a href="#">New repository</a>
+            <a href="#">Import repository</a>
+            <a href="#">New gist</a>
+            <a href="#">New organization</a>
+            <a href="#">New project</a>
+          </div>
+        </div>
+        <div class="dropdown">
+          <div id="icons2">
+            <img src="" alt="user avatar" id="navImg">
+            <i class="fa fa-caret-down" aria-hidden="true"></i>
+          </div>
+          <div class="dropdown-content hide" id="content-2">
+            <div class="info">
+              <p>Signed in as:</p>
+              <h4 class="username"></h4>
+            </div>
+            <div class="status status-dropdown">
+              <i class="fa fa-smile-o" ></i>
+              <p>Set Status</p>
+            </div>
+            <div class="links1">
+              <a href="#">Your profile</a>
+              <a href="#">Your repositories</a>
+              <a href="#">Your organizations</a>
+              <a href="#">Your projects</a>
+              <a href="#">Your stars</a>
+              <a href="#">Your gists</a>
+            </div>
+            <div class="links2">
+              <a href="#">Upgrade</a>
+              <a href="#">Feature Preview</a>
+              <a href="#">Help</a>
+              <a href="#">Settings</a>
+              <a href="#">Sign out</a>
+            </div>
+          </div>
+        </div>
+      </div>
+      
+    </div>
+    <div class="mobile hide" id="mobile-nav">
+      <ul>
+        <li>
+          <div class="input-mobile">
+            <input type="text" placeholder="Search or jump to.." class="nav-input">
+            <div>/</div>
+          </div>
+        </li>
+        <li><a href="#">Dashboard</a></li>
+        <li><a href="#">Pull requests</a></li>
+        <li><a href="#">Issues</a></li>
+        <li><a href="#">Marketplace</a></li>
+        <li><a href="#">Explore</a></li>
+        <li class="user"><div><img src="" alt="userAvatar" id="dropdownImg"><a href="#" class="username"></a></div></li>
+        <li><span class="iconify" data-icon="octicon:sign-out-16" data-inline="false"></span><a href='index.html' style="margin-left: 5px">Sign out</a></li>
+      </ul>
+    </div>
+  </nav>
+
+  <div class="container">
+
+    <!-- Profile Section -->
+    <div class="section">
+      <div class="profile">
+        <div class='icon-container'>
+          <img src="" alt="userAvatar" id="userAvatar">
+          <div class='status-circle'>
+            <i class="fa fa-smile-o smile" aria-hidden="true"></i><span id='status'>Set Status</span>
+          </div>
+        </div>
+        
+        <div class="name">
+          <h2 class="owner"></h2>
+          <h5 class="username"></h5>
+        </div>
+      </div>
+      <div class="status">
+        <i class="fa fa-smile-o " aria-hidden="true"></i>
+        <p>Set Status</p>
+      </div>
+      <p id="role"></p>
+      <button class="edit">Edit profile</button>
+      <div class="twitter-link">
+        <i class="fa fa-twitter" aria-hidden="true"></i>
+        <a href="https://twitter.com/bioye7">@bioye7</a>
+      </div>
+    </div>
+
+    <!-- Repositiories section -->
+    <div class="right-sect">
+      <div class="options">
+        <ul>
+          <li><span class="iconify list-icon" data-icon="octicon:book-16" data-inline="false"></span><a href="#">Overview</a></li>
+          <li id="repo-list"><span class="iconify list-icon" data-icon="octicon:repo-16" data-inline="false"></span><a href="#">Repositiories <span id="repototal"></span></a></li>
+          <li><span class="iconify list-icon" data-icon="octicon:project-16" data-inline="false"></span><a href="#">Projects</a></li>
+          <li><span class="iconify list-icon" data-icon="octicon:package-16" data-inline="false"></span><a href="#">Packages</a></li>
+        </ul>
+      </div>
+      <div class="action">
+        <div class="search"><input type="text" placeholder="Find a repository..."></div>
+        <div class="buttons">
+          <div>
+            <button>
+              Type: <span>All
+                <i class="fa fa-caret-down" aria-hidden="true"></i></span> 
+            </button>
+            <button>
+              Language: <span>All <i class="fa fa-caret-down" aria-hidden="true"></i> </span>
+              
+            </button>
+          </div>
+          <button>
+            <span><i class="fa fa-file-text-o" aria-hidden="true"></i></span>
+            New
+          </button>
+        </div>
+      </div>
+      <!-- Each repository will be appended to the div below -->
+      <div class="repositories"></div>
+    </div>
+
+
+    <!-- Loading Modal -->
+    <div class="modal" id="load">
+      <div class="loading-modal w-full">
+          <div class="loader">
+            <div class="lds-dual-ring"></div>
+          </div>
+      </div>
+    </div>
+  </div>
+
+<script src="app.js"></script>
+</body>
+</html>

@@ -1,0 +1,745 @@
+body{
+  margin: 0;
+  padding: 0;
+  font-family: 'Lato', sans-serif;
+}
+h1{
+  font-size: 4em;
+  color: rgb(117, 109, 109)
+}
+
+/* NAVIGATION STYLING */
+nav{
+  background-color: #24292e;
+  padding: 15px 20px;
+  color: hsla(0, 0%, 100%, 0.7);
+  box-sizing: border-box;
+}
+.fa{
+  color: #fff;
+  cursor: pointer;
+}
+.fa-bars{
+  font-size: 1.7em
+}
+.fa-github{
+  font-size: 2.3em;
+}
+.fa-bell-o{
+  font-size: 1.2em
+}
+.fa-smile-o{
+  color: #24292E
+}
+
+.main-nav{
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  
+}
+.left-al{
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  width: 55%
+}
+.menu{
+  display: none;
+  visibility: hidden;
+}
+.hide{
+  display: none;
+}
+.visible{
+  display: block;
+}
+
+.mobile{
+  width: 100%;
+  margin-top: 20px;
+}
+.mobile  ul{
+  list-style-type: none;
+  margin: 0;
+  padding: 0;
+  
+}
+.mobile ul li:first-child{
+  border: 0
+}
+.mobile ul li:last-child{
+  color: #fff;
+}
+.mobile li:last-child b{
+  padding-left: 5px
+}
+.mobile ul li:last-child:hover{
+  color: hsla(0, 0%, 100%, 0.7);
+}
+.mobile ul li{
+  border-top: 1px solid #6a737d;
+  
+}
+.mobile ul li{
+  padding: 10px 0;
+  margin: 0
+}
+.mobile ul li a{
+  text-decoration: none;
+  color: #fff;
+  font-size: 1em;
+  font-weight: 700;
+}
+.mobile a:hover{
+  color: hsla(0, 0%, 100%, 0.7);
+}
+.input-mobile{
+  border: 1px solid #474c52;
+  border-radius: 5px;
+  padding: 3px 10px;
+  display: flex;
+  justify-content: space-between;
+  font-size: 1.1em;
+}
+.input-mobile div{
+  border: 1px solid #474c52;
+  padding: 5px 10px;
+  border-radius: 5px
+}
+.nav-input{
+  background-color: #24292e;
+  color: #fff;
+}
+input{
+  border: none; 
+  font-weight:400;
+  margin: 0;
+  padding: 0;
+  outline: 0;
+  width: 100%
+  
+}
+input::placeholder{
+  font-size: 1.1em;
+  color: #cac9c9
+}
+#icons2{
+  display: flex;
+  align-items: center;
+}
+
+#navImg, #dropdownImg{
+  width: 20px;
+  height: 20px;
+  border-radius:50%;
+  margin-right: 5px;
+}
+li.user div{
+  display: flex;
+  align-items: center;
+}
+.dropdown{
+  display: none;
+}
+
+form{
+  margin-top: 50px;
+  text-align: center;
+  color: #24292e;
+}
+form > div {
+  padding: 10px;
+  border: 1px solid #474c52;
+  background-color: #fff;
+  border-radius: 12px;
+  width: 80%;
+  margin: 0 auto;
+  max-width: 400px
+}
+#text-div{
+  border: 1px solid #474c52;
+  border-radius: 10px;
+  margin-bottom: 20px;
+  padding: 5px 0
+}
+#text-div input{
+  width: 90%;
+  background-color: #fff;
+  color: #000
+}
+
+
+.container{
+  padding: 5px 15px
+}
+
+
+/* PROFILE SECTION */
+.profile{
+  display: flex;
+  width: 100%;
+  box-sizing: border-box;
+}
+.icon-container {
+  width: 100px;
+  height: 100px;
+  position: relative;
+}
+#userAvatar{
+  width: 100%;
+  height: 100%;
+  border-radius: 50%;
+  
+}
+.status-circle {
+  width: 10px;
+  height: 10px;
+  border-radius: 50%;
+  background-color: #fff;
+  padding: 5px 5px;
+  display: flex; 
+  align-items: center; 
+  justify-content: center;
+  border: 1px solid #d1d5da;
+  bottom: 0;
+  right: 0;
+  position: absolute;
+}
+#status{
+  display: none;
+  font-size: 0.7em
+}
+.status-circle:hover{
+  width: 80px;
+  border-radius: 20px;
+  
+}
+.status-circle:hover #status{
+  display: inline;
+  margin-left: 5px
+}
+.smile{
+  font-size: 12px
+}
+.name{
+  margin-left: 20px;
+  margin-top: 15px;
+}
+.name h2, h5{
+  margin: 0;
+  color: #24292e
+}
+.name h5{
+  font-size: 1.2em;
+  font-weight: 300;
+}
+.status{
+  border-radius: 5px;
+  border: 1px solid #e1e1e1;
+  padding: 0 10px;
+  box-sizing: border-box;
+  margin: 8px auto;
+  width: 100%;
+  display: flex;
+  align-items: center;
+}
+.status p{
+  color: #24292E;
+  font-size: 12px;
+  padding: 8px 8px 8px 16px;
+  margin: 0
+}
+.edit{
+  width: 100%;
+  background-color: #fafbfc;
+  padding: 8px 0;
+  outline: none;
+  box-shadow: none;
+  border: 1px solid rgba(27, 31, 35, 0.15);
+  cursor: pointer;
+  border-radius: 5px;
+  color: #24292E;
+  font-weight: 700;
+  margin-bottom: 30px
+}
+.twitter-link{
+  display: none;
+}
+
+
+/* REPOSITORY SECTION HEADER */
+.options ul{
+  list-style-type: none;
+  padding: 10px 10px 0 10px;
+  display: flex;
+  border-bottom: 1px solid #d1d5da;
+  
+}
+.options li{
+  margin: 0 15px 0 15px;
+  padding-bottom: 10px;
+}
+.options a{
+  text-decoration: none;
+  color: #24292E;
+  font-size: 0.9em;
+  
+}
+.options span{
+  background-color: rgba(209, 213, 218, 0.5);
+  border: 1px solid #d1d5da;
+  padding: 2px 5px;
+  margin-left: 5px;
+  border-radius: 15px
+}
+.list-icon{
+  display: none;
+}
+.options li:hover{
+  border-bottom: 2px solid #d1d5da
+}
+.options ul li:nth-child(2) {
+  font-weight: 700;
+  border-bottom: 2px solid #f9826c;
+}
+.options ul li:nth-child(2):hover{
+  border-bottom: 2px solid #f9826c;
+}
+.options li {
+  display: flex;
+  align-items: center;
+}
+.iconify{
+  color: #6a737d
+}
+
+.action input{
+  background-color: #fff;
+  color: #6a6b6b
+}
+.action input::placeholder{
+  color: #6a6b6b
+}
+.search{
+  border: 1px solid #d1d5da;
+  margin: 0 0 10px 0;
+  border-radius: 5px;
+  padding: 8px
+}
+.buttons{
+  display: flex;
+  justify-content: space-between;
+}
+.buttons div button{
+  background-color: #fff;
+  border: 1px solid #d1d5da;
+  color: #24292E;
+  outline: none;
+  box-shadow: none;
+  padding: 8px 12px;
+  border-radius: 5px;
+  cursor: pointer;
+}
+.buttons div button:hover{
+  background-color: #f0efef;
+}
+.buttons button{
+  border: none;
+  outline: none;
+  box-shadow: none;
+  cursor: pointer;
+  color: white;
+  padding: 8px 18px;
+  background-color: #2ea44f;
+  border-radius: 5px;
+}
+button .fa{
+  color: #24292E
+}
+button .fa-file-text-o{
+  color: white
+}
+
+/* REPOSTIORIES STYLING */
+.repositories{
+  margin-top: 20px
+}
+.repo{
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  border-top: 1px solid #eaecef;
+  padding: 20px 0
+}
+.wrapper{
+  width: 60%;
+  color: #586069
+}
+.repo-name{
+  font-size: 1.4em;
+  text-decoration: none;
+  color: blue
+}
+a.repo-name{
+  cursor: pointer;
+}
+.repo-name:hover{
+  text-decoration: underline;
+}
+.description{
+  margin-top: 5px;
+  font-size: 0.8em;
+  line-height: 1.8em;
+}
+div.langcolor{
+  margin-right: 15px;
+  display: flex;
+  align-items: center;
+}
+.color{
+  width: 15px;
+  height: 15px;
+  border-radius: 50%;
+  margin-right: 5px;
+  display: inline-block
+}
+span.star, span.fork{
+  margin: 0 8px;
+}
+
+.star .fa, .fork .fa{
+  color: #24292E;
+  margin-right: 3px
+}
+
+.updated{
+  font-size: 0.8em;
+  margin : 1px 0 0 0
+}
+button .fa-star-o{
+  font-weight: 400;
+  margin-right: 5px;
+}
+.repo button{
+  padding: 6px 15px;
+  font-weight: 500;
+  background-color: #fafbfc;
+  color: #24292E;
+  border-radius: 7px;
+  outline: none;
+  border: 1px solid rgba(27, 31, 35, 0.15);
+}
+.repo button:hover{
+  background-color: #f0efef;
+}
+.repofooter{
+  display: flex;
+  align-items: center;
+}
+span.lang{
+  font-size: 0.9em
+}
+
+/* LOADING MODAL STYLING */
+.modal{
+  display: block;
+  position: fixed;
+  z-index: 1;
+  left: 0;
+  top: 0;
+  width: 100%;
+  height: 100%;
+  overflow: auto;
+  background-color: rgba(0,0,0, 0.1);
+}
+.loading-modal{
+  min-height: 350px;
+  
+}
+
+.loader{
+  position: relative;
+  top: 150px;
+  text-align: center
+}
+.lds-dual-ring {
+  display: inline-block;
+  width: 80px;
+  height: 80px;
+}
+.lds-dual-ring:after {
+  content: " ";
+  display: block;
+  width: 64px;
+  height: 64px;
+  margin: 8px;
+  border-radius: 50%;
+  border: 6px solid #fff;
+  border-color: #fff transparent #fff transparent;
+  animation: lds-dual-ring 1.2s linear infinite;
+}
+@keyframes lds-dual-ring {
+  0% {
+    transform: rotate(0deg);
+  }
+  100% {
+    transform: rotate(360deg);
+  }
+}
+
+
+/*===================================================*/
+/* ====================Media Queries================== */
+/* ===================================================== */
+@media only screen and (min-width: 544px){
+  .list-icon{
+    display: inline;
+    padding-right: 5px;
+    
+  }
+}
+@media only screen and (min-width: 767px){
+  nav{
+    padding: 0;
+  }
+  #mobile-nav{
+    display: none;
+  }
+  #bar{
+    display: none;
+  }
+  .main-nav{
+    padding: 5px 20px
+  }
+  .left-al{
+    width: 45%;
+  }
+  .menu{
+    display: block;
+    visibility: visible;
+    margin-left: 10px;   
+  }
+  .menu ul{
+    display: flex;
+    list-style-type: none;
+    align-items: center;
+    margin: 10px 0;
+    padding: 0
+  }
+  .menu li a{
+    text-decoration: none;
+    color: #fff;
+    font-size: 0.9em;
+    font-weight: 700;
+    margin: 0 10px
+  }
+  .menu li a:hover{
+    color: hsla(0, 0%, 100%, 0.7)
+  }
+  .fa-bell-o:hover{
+    color: hsla(0, 0%, 100%, 0.7)
+  }
+  .input{
+    border: 1px solid #474c52;
+    border-radius: 5px;
+    padding: 3px 10px;
+    display: flex;
+    justify-content: space-between;
+    font-size: 1.1em;
+    min-width: 250px
+  }
+  .input div{
+    border: 1px solid #474c52;
+    padding: 1px 8px;
+    border-radius: 5px
+  }
+  .menu ul li:first-child{
+    width: 50%
+  }
+  .right-al{
+    display: flex;
+    min-width: 120px;
+    justify-content: space-between;
+  }
+  .dropdown {
+    position: relative;
+    display: inline-block;
+  }
+  #icons i{
+    margin: 0 2px
+  }
+  .dropdown:hover  i{
+    color:hsla(0, 0%, 100%, 0.7)
+  }
+  .dropdown:hover .fa-smile-o{
+    color: #24292E;
+  }
+  /* Dropdown Content (Hidden by Default) */
+  .dropdown-content {
+    position: absolute;
+    left: -150px;
+    background-color: #fff;
+    min-width: 160px;
+    box-shadow: 0px 8px 16px 0px rgba(0,0,0,0.2);
+    z-index: 1;
+    padding: 3px 0;
+    border-radius: 5px;
+  }
+  /* Links inside the dropdown */
+  .dropdown-content a {
+    font-size: 14px;
+    color: #24292E;
+    padding: 8px 8px 8px 16px;
+    text-decoration: none;
+    display: block;
+  }
+  .dropdown-content a:hover{
+    background-color: blue;
+    color: white
+  }
+  .info{
+    border-bottom: 1px solid #e1e1e1;
+  }
+  .info p{
+    color: #24292E;
+    padding: 8px 8px 8px 16px;
+    margin: 0;
+    font-weight: 300;
+    cursor: pointer;
+  }
+  .info h4{
+    font-weight: 400;
+    color: #24292E;
+    padding: 0 8px 8px 16px;
+    margin: 0;
+    cursor: pointer;
+  }
+  .status{
+    display: none;
+  }
+  .status-dropdown{
+    display: block
+
+  }
+  .status-dropdown{
+    border-radius: 5px;
+    border: 1px solid #e1e1e1;
+    padding: 0 10px;
+    box-sizing: border-box;
+    margin: 8px auto;
+    width: 80%;
+    display: flex;
+    align-items: center;
+  }
+  .status p{
+    color: #24292E;
+    font-size: 12px;
+    padding: 8px 8px 8px 16px;
+    margin: 0
+  }
+  .links1{
+    border-top: 1px solid #e1e1e1;
+    border-bottom: 1px solid #e1e1e1;
+  }
+  .links2{
+    margin-top:8px
+  }
+  .container{
+    display: flex;
+    justify-content: space-between;
+  }
+  .icon-container{
+    width: 80%;
+    height: 70%;
+    margin: 0 auto;
+  }
+  #userAvatar{
+    width: 100%;
+    height: 100%;
+  }
+  .status-circle{
+    width: 15px;
+    height: 15px;
+    bottom: 20px;
+    right: 20px
+  }
+  .smile{
+    font-size: 16px;
+  }
+  
+  
+  .section{
+    width: 23%;
+    margin-top: 40px;
+  }
+  .right-sect{
+    width: 75%
+  }
+  .action{
+    display: flex;
+    justify-content: space-between;
+  }
+  .search{
+    width: 40%;
+    margin-bottom: 0;
+    padding: 5px 8px 5px 8px
+  }
+  .buttons{
+    display: flex;
+    margin-left: 20px;
+  }
+  .buttons div{
+    margin-right: 10px
+  }
+  .profile{
+    display: block;
+    text-align: center;
+  }
+  
+  .name{
+    margin: 0;
+    text-align: left;
+  }
+  
+  .edit{
+    margin-bottom: 20px;
+  }
+  .fa-twitter{
+    color: #6a737d
+  }
+  .twitter-link{
+    display: block;
+  }
+  .twitter-link a{
+    text-decoration: none;
+    color: #24292E;
+  }
+  .twitter-link a:hover{
+    color: blue;
+    text-decoration: underline;
+  }
+}
+
+@media only screen and (max-width: 510px){
+  .options ul{
+    padding: 0
+  }
+}
+
+
+@media only screen and (max-width: 414px){
+  .options li{
+    margin: 0 10px 0 0;
+  }
+  p.description{
+    font-size: 0.7em
+  }
+  div.repofooter{
+    font-size: 0.7em
+  }
+  .options a{
+    font-size: 0.8em;
+  }
+}
+
