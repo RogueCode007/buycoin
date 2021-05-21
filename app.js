@@ -47,7 +47,11 @@ async function grabGitHubData(query){
     })
     const body = await response.json()
     let data =   body.data;
-    
+    console.log(data)
+    if (data.user.name == null){
+      alert('User does not exist');
+      location.href="index.html"
+    }
     //Fill data in where necessary
     document.getElementsByClassName('owner')[0].innerText = data.user.name
     let username = document.getElementsByClassName('username')
@@ -154,7 +158,8 @@ async function grabGitHubData(query){
     }
   }
   catch(err){
-    console.log(err);
+    alert('User does not exist');
+    location.href="index.html"
   }
 }
 
