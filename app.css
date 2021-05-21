@@ -150,7 +150,7 @@ form{
 }
 form > div {
   padding: 10px;
-  border: 1px solid #474c52;
+  border: 1px solid #d1d5da;
   background-color: #fff;
   border-radius: 12px;
   width: 80%;
@@ -158,7 +158,7 @@ form > div {
   max-width: 400px
 }
 #text-div{
-  border: 1px solid #474c52;
+  border: 1px solid #d1d5da;
   border-radius: 10px;
   margin-bottom: 20px;
   padding: 5px 0
