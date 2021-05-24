@@ -120,6 +120,7 @@ input{
   width: 100%
   
 }
+
 input::placeholder{
   font-size: 1.1em;
   color: #cac9c9
@@ -169,6 +170,25 @@ form > div {
   color: #000
 }
 
+/* Browser autofill input styling */
+input:-webkit-autofill,
+input:-webkit-autofill:hover, 
+input:-webkit-autofill:focus, 
+input:-webkit-autofill:active
+{
+ -webkit-box-shadow: 0 0 0 30px white inset !important;
+  box-shadow: 0 0 0 30px white inset !important;
+}
+/* Browser autofill input styling */
+
+#form-btn{
+  background-color: #24292e;
+  border-radius: 8px;
+  color: white;
+  padding: 8px 12px;
+  border: 1px solid;
+  cursor: pointer;
+}
 
 .container{
   padding: 5px 15px
